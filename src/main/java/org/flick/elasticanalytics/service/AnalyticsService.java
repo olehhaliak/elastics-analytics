@@ -4,5 +4,5 @@ import org.flick.elasticanalytics.dto.AnalyticsRecordDto;
 
 public interface AnalyticsService {
 
-    void addRecord(AnalyticsRecordDto dto);
+    void addNewRecord(AnalyticsRecordDto dto);
 }

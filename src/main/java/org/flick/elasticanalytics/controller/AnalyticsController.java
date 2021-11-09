@@ -18,6 +18,6 @@ public class AnalyticsController {
     @ResponseStatus(HttpStatus.OK)
     public void getAnalytics(@RequestBody AnalyticsRecordDto dto, @Autowired HttpServletRequest request) {
         dto.setIp(request.getRemoteAddr());
-        analyticService.addRecord(dto);
+        analyticService.addNewRecord(dto);
     }
 }

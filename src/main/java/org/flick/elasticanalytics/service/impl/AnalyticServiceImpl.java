@@ -14,11 +14,16 @@ public class AnalyticServiceImpl implements AnalyticsService {
     private final LocationServiceImpl locationService;
     private final PlatformServiceImpl platformService;
 
-    public void addRecord(AnalyticsRecordDto dto) {
+    public void addNewRecord(AnalyticsRecordDto dto) {
+        AnalyticsRecord record = buildRecord(dto);
+        System.out.println(record);
+    }
+
+    private AnalyticsRecord buildRecord(AnalyticsRecordDto dto) {
         AnalyticsRecord record = mapper.mapToModel(dto);
         record.setLocation(locationService.getLocationByIp(dto.getIp()));
         record.setPlatform(platformService.getPlatformByUserAgent(dto.getPlatform()));
-        System.out.println(record);
+        return record;
     }
 
 
