@@ -1,17 +1,18 @@
-package org.flick.elasticanalytics.service;
+package org.flick.elasticanalytics.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.flick.elasticanalytics.dto.AnalyticsRecordDto;
 import org.flick.elasticanalytics.mapper.AnalyticsRecordMapper;
 import org.flick.elasticanalytics.model.AnalyticsRecord;
+import org.flick.elasticanalytics.service.AnalyticsService;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AnalyticService {
+public class AnalyticServiceImpl implements AnalyticsService {
     private final AnalyticsRecordMapper mapper;
-    private final LocationService locationService;
-    private final PlatformService platformService;
+    private final LocationServiceImpl locationService;
+    private final PlatformServiceImpl platformService;
 
     public void addRecord(AnalyticsRecordDto dto) {
         AnalyticsRecord record = mapper.mapToModel(dto);

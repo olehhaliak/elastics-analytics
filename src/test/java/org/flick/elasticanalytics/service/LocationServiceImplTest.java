@@ -1,5 +1,6 @@
 package org.flick.elasticanalytics.service;
 
+import org.flick.elasticanalytics.service.impl.LocationServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +9,10 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {LocationService.class})
-class LocationServiceTest {
+@ContextConfiguration(classes = {LocationServiceImpl.class})
+class LocationServiceImplTest {
 @Autowired
-LocationService service;
+LocationServiceImpl service;
     @Test
     void getLocationForIpTest() {
         String ip = "188.163.112.225";
