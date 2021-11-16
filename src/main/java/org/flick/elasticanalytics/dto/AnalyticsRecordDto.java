@@ -14,7 +14,7 @@ public class AnalyticsRecordDto {
     private String locale;
     private String platform;
     private Layout layout;
-    private LocalTime localTime;
+    private ClientTime clientTime;
     private String ip;
 
     @Data
@@ -30,7 +30,7 @@ public class AnalyticsRecordDto {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    public static class LocalTime {
+    public static class ClientTime {
         private Long timestamp;
         private int timezone;
     }
