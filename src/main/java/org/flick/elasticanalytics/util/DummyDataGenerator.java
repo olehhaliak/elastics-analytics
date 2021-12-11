@@ -32,8 +32,8 @@ public class DummyDataGenerator {
     @Autowired
     ObjectMapper mapper;
 
-    @Autowired
-    LocationService service;
+    //@Autowired
+   // LocationService service;
 
     public DummyDataGenerator() {
 
@@ -233,8 +233,8 @@ public class DummyDataGenerator {
         Timestamp timestamp = Timestamp.valueOf(
                 LocalDateTime.of(
                         LocalDateTime.now().getYear(),
-                        9,// LocalDateTime.now().getMonthValue(),
-                        random.nextInt(30)+1,//gregorianCalendar.getActualMaximum(Calendar.DAY_OF_MONTH) - 1) + 1,
+                        11,// LocalDateTime.now().getMonthValue(),
+                        30,//gregorianCalendar.getActualMaximum(Calendar.DAY_OF_MONTH) - 1) + 1,
                         hours,
                         random.nextInt(60),
                         random.nextInt(60)));
