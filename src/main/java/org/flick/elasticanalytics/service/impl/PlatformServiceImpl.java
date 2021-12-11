@@ -18,4 +18,10 @@ public class PlatformServiceImpl implements PlatformService {
         PlatformDto dto = platformClient.getPlatformByUserAgent(userAgent);
         return mapper.mapToModel(dto);
     }
+
+    private void trimBrowserVersion(PlatformDto dto) {
+        String version = dto.getBrowser().getVersion();
+        version = version.substring(0, version.indexOf('.'));
+        dto.getBrowser().setVersion(version);
+    }
 }
