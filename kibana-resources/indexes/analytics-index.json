@@ -1,0 +1,196 @@
+{
+    "analytics" : {
+      "aliases" : { },
+      "mappings" : {
+        "properties" : {
+          "_class" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false
+          },
+          "clientTime" : {
+            "properties" : {
+              "timestamp" : {
+                "type" : "date"
+              },
+              "timezone" : {
+                "type" : "long"
+              }
+            }
+          },
+          "historyLength" : {
+            "type" : "long"
+          },
+          "ip" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "layout" : {
+            "properties" : {
+              "screenHeight" : {
+                "type" : "long"
+              },
+              "screenWidth" : {
+                "type" : "long"
+              },
+              "windowHeight" : {
+                "type" : "long"
+              },
+              "windowWidth" : {
+                "type" : "long"
+              }
+            }
+          },
+          "locale" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            },
+            "fielddata" : true
+          },
+          "location" : {
+            "properties" : {
+              "city" : {
+                "type" : "text",
+                "fields" : {
+                  "keyword" : {
+                    "type" : "keyword",
+                    "ignore_above" : 256
+                  }
+                }
+              },
+              "country" : {
+                "type" : "text",
+                "fields" : {
+                  "keyword" : {
+                    "type" : "keyword",
+                    "ignore_above" : 256
+                  }
+                }
+              },
+              "geoPoint" : {
+                "type" : "geo_point"
+              },
+              "latitude" : {
+                "type" : "float"
+              },
+              "longitude" : {
+                "type" : "float"
+              },
+              "regionName" : {
+                "type" : "text",
+                "fields" : {
+                  "keyword" : {
+                    "type" : "keyword",
+                    "ignore_above" : 256
+                  }
+                }
+              }
+            }
+          },
+          "page" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "platform" : {
+            "properties" : {
+              "browser" : {
+                "properties" : {
+                  "name" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "version" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  }
+                }
+              },
+              "deviceType" : {
+                "type" : "text",
+                "fields" : {
+                  "keyword" : {
+                    "type" : "keyword",
+                    "ignore_above" : 256
+                  }
+                }
+              },
+              "os" : {
+                "properties" : {
+                  "name" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "version" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "referer" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          }
+        }
+      },
+      "settings" : {
+        "index" : {
+          "routing" : {
+            "allocation" : {
+              "include" : {
+                "_tier_preference" : "data_content"
+              }
+            }
+          },
+          "number_of_shards" : "1",
+          "provided_name" : "analytics",
+          "creation_date" : "1637496412968",
+          "number_of_replicas" : "1",
+          "uuid" : "crAGsGhRQAG_whavVqbm_A",
+          "version" : {
+            "created" : "7150099"
+          }
+        }
+      }
+    }
+  }
