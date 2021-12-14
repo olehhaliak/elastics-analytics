@@ -2,8 +2,9 @@
 # elastics-analytics 
  Coursework title: **"Аналітика поведінки користувачів вебсайту за допомогою БД Elasticsearch"**  
  Related links:
- ```
- ```
+
+ [Report](https://docs.google.com/document/d/1Alim5a0gJNq8PDN6R6xfl3EfEyBn0xHE/edit?usp=sharing&ouid=109657445850621992282&rtpof=true&sd=true)
+
 ## Concept
 1. Information about client is gathered and sent via js script
 2. Spring application receives this info, extract additional data from some values and persist it in Elasticsearch
